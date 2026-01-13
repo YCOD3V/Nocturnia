@@ -16,10 +16,18 @@
 <body data-server-address="actualiza-tu-ip:9876" data-server-name="[SA] ESP/LATAM|PvE|Nocturnia|No Wipe">
   <a class="skip-link" href="#unete"></a>
   <div class="bg-texture"></div>
+  </div>
   <header class="topbar">
     <div class="brand">
       <img class="brand__logo" src="img/Nocturnia.png" alt="Logo Nocturnia" decoding="async" />
       <span></span>
+    </div>
+    <div class="topbar__center">
+      <a href="https://www.tiktok.com/@ycod3v" target="_blank" rel="noopener" class="tiktok-icon-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M22.5 7.5c.2 2.2 2.1 3.9 4.3 3.9v3.1c-1.2.1-2.4-.1-3.5-.6v8.2c0 4.1-3.3 7.4-7.4 7.4s-7.4-3.3-7.4-7.4 3.3-7.4 7.4-7.4c.2 0 .4 0 .6.1v3.2c-.2 0-.4-.1-.6-.1-2.3 0-4.2 1.9-4.2 4.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2V4.5h3.4v3z" fill="#d93449"/>
+        </svg>
+      </a>
     </div>
     <nav class="nav" aria-label="Navegación principal">
       <a class="nav__cta" href="https://discord.gg/TQ3gaJVgTh" target="_blank" rel="noopener">Únete a nuestro Discord</a>
@@ -160,6 +168,8 @@
             <li>Día de 20 minutos (08:00 a 18:00)</li>
             <li>Blood Moon cada 8-14 noches con +30 % de bonificación</li>
             <li>Inventario y stacks estándar para mantener el desafío</li>
+            <li>Reinicios automatizados 04:00 (UTC-3)</li>
+            <li>Autosave cada 2 minutos</li>
           </ul>
         </article>
         <article class="config-card">
@@ -174,19 +184,13 @@
         <article class="config-card">
           <h3>Castillos</h3>
           <ul>
-            <li>Drenaje de castillo 0.75 · decadencia 0.4</li>
-            <li>Prisión hasta 15 celdas · 1 castillo por clan</li>
-            <li>Teletransporte sin restricciones · sangre ligada activa</li>
-            <li>Protección al desconectar · inmunidad solar 360 s</li>
-          </ul>
-        </article>
-        <article class="config-card">
-          <h3>Operaciones</h3>
-          <ul>
-            <li>Autosave cada 2 minutos · 60 backups inteligentes</li>
-            <li>Reinicios automatizados 04:00 (UTC-3)</li>
-            <li>5 slots de reconexión segura por 7 minutos</li>
-            <li>RCON habilitado para avisos y administración remota</li>
+            <li>Nivel 1: 50 losas de superficie, 1 sirviente, 3 pisos de altura.</li>
+            <li>Nivel 2: 140 losas de superficie, 3 sirvientes, 3 pisos de altura.</li>
+            <li>Nivel 3: 240 losas de superficie, 5 sirvientes, 3 pisos de altura.</li>
+            <li>Nivel 4: 360 losas de superficie, 7 sirvientes, 3 pisos de altura.</li>
+            <li>Nivel 5: 550 losas de superficie, 8 sirvientes, 3 pisos de altura.</li>
+            <li><strong>Límite de prisión:</strong> 12 celdas</li>
+            <li>1 castillo por clan/jugador</li>
           </ul>
         </article>
       </div>
@@ -217,7 +221,6 @@
           <h3>Castillos y loot</h3>
           <ul>
             <li>Sin griefing ni ocupación de castillos ajenos.</li>
-            <li>El límite de 1 castillo es 1 por clan.</li>
             <li>El loot compartido en eventos se reparte en el momento.</li>
           </ul>
         </div>
@@ -253,9 +256,14 @@
           <h3>Soporte directo</h3>
           <p>Staff activo en Discord.</p>
         </div>
-        <div class="community-card">
-          <h3>Recursos útiles</h3>
-          <p>Guía de progresión, builds recomendadas y atlas de Vardoran disponibles en canales exclusivos para nuestra comunidad.</p>
+        <div class="community-card panel panel--server noise" id="battlemetrics-panel" style="max-width:none;">
+          <div class="panel__title">Jugadores activos: Vía Battlemetrics</div>
+          <div class="panel__value" id="player-count">Cargando...</div>
+            <div style="display: flex; justify-content: center; margin-top: 10px;">
+              <button class="button-panel-completo" onclick="window.open('https://www.battlemetrics.com/servers/vrising/37292290','_blank')" style="background:transparent;border:none;padding:0;font:inherit;color:inherit;">
+                Visualizar panel completo
+              </button>
+            </div>
         </div>
       </div>
       <div class="cta-row cta-row--center"></div>
