@@ -1,3 +1,30 @@
+/* Botón BattleMetrics panel-link-btn */
+.panel-link-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  background: linear-gradient(90deg, var(--panel), var(--panel-2));
+  color: var(--accent);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  font-weight: 600;
+  margin-top: 2px;
+}
+.panel-link-btn:hover, .panel-link-btn:focus {
+  background: transparent;
+  color: var(--accent);
+  box-shadow: none;
+  outline: none;
+}
+.panel-link-btn:active {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(var(--accent-rgb), 0.22);
+}
 :root {
   --bg: #06050f;
   --panel: #0a101f;
@@ -299,7 +326,7 @@ main {
     grid-column: 1;
     grid-row: 1;
     align-self: stretch;
-  }
+      padding: 10px 20px;
 
   .hero__gallery {
     grid-column: 2;
@@ -2083,5 +2110,33 @@ main {
 
 .server-panel__grid--compact {
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+}
+
+.button-panel-completo {
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 0;
+  font-size: 1.1rem;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 0;
+  transition: color 0.2s;
+  box-shadow: none;
+  outline: none;
+  font-weight: 600;
+}
+.button-panel-completo:hover {
+  color: #d93449;
+}
+.button-panel-completo:active {
+  color: #fff;
+}
+
+.tiktok-icon-link svg path {
+  transition: fill 0.2s;
+}
+.tiktok-icon-link:hover svg path {
+  fill: #fff !important;
 }
 
