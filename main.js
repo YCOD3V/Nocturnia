@@ -38,6 +38,25 @@ document.querySelectorAll('[data-copy-ip]').forEach((btn) => {
 });
 
 const track = document.querySelector('.gallery__track');
+
+// BattleMetrics Player Count
+async function fetchPlayerCount() {
+  const url = 'https://api.battlemetrics.com/servers/37292290';
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error('Error al obtener datos');
+    const data = await response.json();
+    const players = data.data?.attributes?.players || 0;
+    const maxPlayers = data.data?.attributes?.maxPlayers || 30;
+    document.getElementById('player-count').textContent = `${players} / ${maxPlayers}`;
+  } catch (e) {
+    document.getElementById('player-count').textContent = 'No disponible';
+  }
+}
+
+if (document.getElementById('player-count')) {
+  fetchPlayerCount();
+}
 const prev = document.querySelector('[data-gallery-prev]');
 const next = document.querySelector('[data-gallery-next]');
 if (track && prev && next) {
