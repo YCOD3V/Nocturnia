@@ -2139,3 +2139,23 @@ main {
 .tiktok-icon-link:hover svg path {
   fill: #fff !important;
 }
+
+/* Firma TikTok en el footer */
+.firma-tiktok {
+  font-size: 15px;
+  color: var(--muted);
+  display: block;
+  margin-top: 8px;
+}
+
+.firma-tiktok-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.firma-tiktok-link:hover {
+  color: var(--accent-2);
+  text-decoration: underline;
+}
